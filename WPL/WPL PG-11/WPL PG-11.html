@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form Validation</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 400px; margin: 50px auto; padding: 20px; border: 1px solid #ccc; }
+        input[type="text"], input[type="password"] { width: 100%; padding: 8px; margin: 5px 0 15px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box; }
+        .error { color: red; font-size: 0.9em; display: none; } 
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>User Registration</h2>
+    
+    <form name="myform" method="post" action="#" onsubmit="return validateform()">
+        
+        <label for="name"><b>Name:</b></label>
+        <input type="text" placeholder="Enter Name" name="name">
+        <span class="error" id="nameError">Name must be filled out.</span>
+        <br/>
+        
+        <label for="password"><b>Password:</b></label>
+        <input type="password" placeholder="Enter Password" name="password">
+        <span class="error" id="passwordError">Password must be at least 6 characters long.</span>
+        <br/>
+        
+        <label for="email"><b>Email:</b></label>
+        <input type="text" placeholder="Enter Email" name="email">
+        <span class="error" id="emailError">Please enter a valid e-mail address.</span>
+        <br/>
+        
+        <label for="mobile"><b>Mobile:</b></label>
+        <input type="text" placeholder="Enter Mobile Number" name="mobile">
+        <span class="error" id="mobileError">Mobile number must be 10 digits and numeric.</span>
+        <br/>
+        
+        <input type="submit" value="Register">
+    </form>
+</div>
+
+<script>
+
+function validateform() {
+    document.getElementById('nameError').style.display = 'none';
+    document.getElementById('passwordError').style.display = 'none';
+    document.getElementById('emailError').style.display = 'none';
+    document.getElementById('mobileError').style.display = 'none';
+    
+    var name = document.myform.name.value;
+    var password = document.myform.password.value;
+    var email = document.myform.email.value;
+    var mobile = document.myform.mobile.value;
+    
+    var isValid = true;
+
+    if (name === null || name === "") { 
+        document.getElementById('nameError').style.display = 'block';
+        isValid = false;
+    }
+
+    if (password.length < 6) { 
+        document.getElementById('passwordError').style.display = 'block';
+        isValid = false;
+    }
+
+    var atposition = email.indexOf("@"); 
+    var dotposition = email.lastIndexOf("."); 
+
+    if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= email.length) { 
+        document.getElementById('emailError').style.display = 'block';
+        isValid = false;
+    }
+
+    if (isNaN(mobile) || mobile.length !== 10) {
+        document.getElementById('mobileError').style.display = 'block';
+        isValid = false;
+    }
+
+    return isValid;
+}
+</script>
+
+</body>
+</html>

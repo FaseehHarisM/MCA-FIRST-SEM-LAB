@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Online Exam</title>
+<style>
+    
+    body { 
+        font-family: Arial; 
+        background-color: #f4f4f4; 
+        padding: 10px; 
+    }
+    
+    .quiz-container { 
+        background: white; 
+        padding: 20px; 
+        border: 1px solid black; 
+        width: 600px; 
+        margin: 10px auto; 
+    }
+    
+    h2 { 
+        color: black; 
+        border-bottom: 1px solid black; 
+        padding-bottom: 5px; 
+    }
+    
+    .question { 
+        margin-bottom: 15px;
+        padding: 10px; 
+        border: 1px dashed gray; 
+    }
+    
+    .question p { 
+        font-weight: bold; 
+        margin-bottom: 10px; 
+    }
+    
+    .options label { 
+        display: block; 
+        margin: 5px 0; 
+    }
+    
+
+    
+    button { 
+        padding: 8px 15px; 
+        background-color: blue; 
+        color: white; 
+        border: 1px solid black; 
+        cursor: pointer; 
+    }
+</style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h2>Web Programming Quiz</h2>
+    <form id="quizForm">
+        
+        <div class="question">
+            <p>1. What is the programming language of the Web?</p>
+            <div class="options">
+                <input type="radio" name="q1" value="A" id="q1a"><label for="q1a">Java</label><br>
+                <input type="radio" name="q1" value="B" id="q1b"><label for="q1b">JavaScript</label><br>
+                <input type="radio" name="q1" value="C" id="q1c"><label for="q1c">Python</label><br>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>2. Which JavaScript object has no constructor and uses static methods?</p>
+            <div class="options">
+                <input type="radio" name="q2" value="A" id="q2a"><label for="q2a">String</label><br>
+                <input type="radio" name="q2" value="B" id="q2b"><label for="q2b">Array</label><br>
+                <input type="radio" name="q2" value="C" id="q2c"><label for="q2c">Math</label><br>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>3. Which method returns the value of x rounded UP to its nearest integer?</p>
+            <div class="options">
+                <input type="radio" name="q3" value="A" id="q3a"><label for="q3a">Math.round(x)</label><br>
+                <input type="radio" name="q3" value="B" id="q3b"><label for="q3b">Math.floor(x)</label><br>
+                <input type="radio" name="q3" value="C" id="q3c"><label for="q3c">Math.ceil(x)</label><br>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>4. The HTML DOM model is constructed as a tree of...</p>
+            <div class="options">
+                <input type="radio" name="q4" value="A" id="q4a"><label for="q4a">Data Types</label><br>
+                <input type="radio" name="q4" value="B" id="q4b"><label for="q4b">Strings</label><br>
+                <input type="radio" name="q4" value="C" id="q4c"><label for="q4c">Objects</label><br>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>5. Array indexes in JavaScript are typically... </p>
+            <div class="options">
+                <input type="radio" name="q5" value="A" id="q5a"><label for="q5a">One-based</label><br>
+                <input type="radio" name="q5" value="B" id="q5b"><label for="q5b">Zero-based</label><br>
+                <input type="radio" name="q5" value="C" id="q5c"><label for="q5c">String-based</label><br>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>6. The getMonth() method returns the month as a number ranging from...</p>
+            <div class="options">
+                <input type="radio" name="q6" value="A" id="q6a"><label for="q6a">1 to 12</label><br>
+                <input type="radio" name="q6" value="B" id="q6b"><label for="q6b">0 to 11</label><br>
+                <input type="radio" name="q6" value="C" id="q6c"><label for="q6c">1 to 31</label><br>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>7. JavaScript objects are written with which type of bracket?</p>
+            <div class="options">
+                <input type="radio" name="q7" value="A" id="q7a"><label for="q7a">Square Brackets []</label><br>
+                <input type="radio" name="q7" value="B" id="q7b"><label for="q7b">Parentheses ()</label><br>
+                <input type="radio" name="q7" value="C" id="q7c"><label for="q7c">Curly Braces {}</label><br>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>8. Which operator can be used to add (concatenate) strings?</p>
+            <div class="options">
+                <input type="radio" name="q8" value="A" id="q8a"><label for="q8a">- (Subtraction)</label><br>
+                <input type="radio" name="q8" value="B" id="q8b"><label for="q8b">+ (Addition)</label><br>
+                <input type="radio" name="q8" value="C" id="q8c"><label for="q8c">! (Logical NOT)</label><br>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>9. The most common way to access an HTML element is by its...</p>
+            <div class="options">
+                <input type="radio" name="q9" value="A" id="q9a"><label for="q9a">Tag Name</label><br>
+                <input type="radio" name="q9" value="B" id="q9b"><label for="q9b">Class Name</label><br>
+                <input type="radio" name="q9" value="C" id="q9c"><label for="q9c">ID</label><br>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>10. The DOM Level 2 method to register an event handler is...</p>
+            <div class="options">
+                <input type="radio" name="q10" value="A" id="q10a"><label for="q10a">onclick</label><br>
+                <input type="radio" name="q10" value="B" id="q10b"><label for="q10b">attachEvent()</label><br>
+                <input type="radio" name="q10" value="C" id="q10c"><label for="q10c">addEventListener()</label><br>
+            </div>
+        </div>
+
+        <button type="button" onclick="checkAnswers()">Submit</button>
+    </form>
+    
+    <div id="results"></div>
+</div>
+
+<script>
+function checkAnswers() {
+    const correctAnswers = {
+        q1: 'B', 
+        q2: 'C', 
+        q3: 'C', 
+        q4: 'C', 
+        q5: 'B', 
+        q6: 'B', 
+        q7: 'C', 
+        q8: 'B', 
+        q9: 'C', 
+        q10: 'C'
+    };
+    
+    let score = 0;
+    const totalQuestions = Object.keys(correctAnswers).length;
+    const form = document.getElementById('quizForm');
+    const resultsDiv = document.getElementById('results');
+
+    for (let i = 1; i <= totalQuestions; i++) {
+        const questionName = 'q' + i;
+        
+        const selectedOption = form.elements[questionName].value; 
+        
+        if (selectedOption === correctAnswers[questionName]) {
+            score++; 
+        }
+    }
+
+    const percentage = (score / totalQuestions) * 100;
+
+    resultsDiv.innerHTML = `
+        <p>Result:</p>
+        <p>Score: ${score} / ${totalQuestions}</p>
+        <p>Percentage: ${percentage.toFixed(1)}%</p>
+    `;
+}
+</script>
+
+</body>
+</html>
