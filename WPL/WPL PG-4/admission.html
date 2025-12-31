@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Admission Form</title>
+<link rel="stylesheet" href="college_style_red.css">
+</head>
+<body style="background-color: #fcfcfc;">
+<h2 class="page-title" style="color: #cc0000;"><u>ONLINE APPLICATION FOR ADMISSION</u></h2> <form class="admission-form">
+<fieldset>
+    <legend>Applicant Personal Details</legend>
+    <label>Full Name:</label><br>
+    <input type="text" name="fullName" size="40"><br><br>
+
+    <label>Date of Birth (DD/MM/YYYY):</label><br>
+    <input type="date" name="dob"><br><br>
+
+    <label>Mobile Number:</label><br>
+    <input type="tel" name="phone" placeholder="10 Digits" required><br><br>
+
+    <label>Official Email:</label><br>
+    <input type="email" name="email" size="40"><br><br>
+
+    <label>Set Password (Min 6 chars):</label><br>
+    <input type="password" name="password" minlength="6"><br><br>
+
+    <label>Permanent Address:</label><br>
+    <textarea id="address" name="user_address" rows="4" cols="45"></textarea><br><br>
+
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female
+    <input type="radio" name="gender" value="other"> Prefer not to say <br><br>
+
+    <label>Programme:</label>
+    <select name="programme_select">
+        <option value="">-- Choose Programme --</option>
+        <option>MCA</option>
+        <option>B.Tech CIVIL ENGINEERING</option>
+        <option>B.Tech COMPUTER SCIENCE & ENGINEERING</option>
+        <option>B.Tech ELECTRONICS & COMMUNICATION ENGINEERING</option>
+        <option>B.Tech ELECTRICAL & ELECTRONICS ENGINEERING</option>
+        <option>B.Tech MECHANICAL ENGINEERING</option>
+        <option>B.Tech CSE (ARTIFICIAL INTELLIGENCE)</option>
+        <option>B.Tech ARTIFICIAL INTELLIGENCE & DATA SCIENCE</option>
+        <option>B.Tech CYBER SECURITY</option>
+        <option>M.Tech CYBER SECURITY</option>
+        <option>M.Tech ARTIFICIAL INTELLIGENCE & DATA SCIENCE</option>
+    </select><br><br>
+</fieldset>
+<input type="submit" value="Submit Application">
+<input type="reset" value="Clear Form">
+</form>
+</body>
+</html>

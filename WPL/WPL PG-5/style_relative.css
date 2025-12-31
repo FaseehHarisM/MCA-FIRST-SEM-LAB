@@ -1,0 +1,27 @@
+#cyan-box {
+    position: relative;
+    left: 40px; 
+    top: 15px;
+    background-color: #00bcd4; 
+}
+
+#magenta-box {
+    position: relative;
+    left: 80px; 
+    top: 40px; 
+    background-color: #e91e63; 
+}
+
+#orange-box {
+    position: relative;
+    left: 120px; 
+    top: 15px; 
+    background-color: #ff9800; 
+}
+
+#purple-box {
+    position: relative;
+    left: 160px; 
+    top: 40px; 
+    background-color: #9c27b0; 
+}

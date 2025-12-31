@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>CSS Positioning Comparison</title>
+<link rel="stylesheet" href="style_relative.css"> <link rel="stylesheet" href="style_absolute.css"> <style>
+
+.item {
+    height: 90px;
+    width: 90px;
+    margin: 8px;
+    border: 1px solid #333;
+}
+
+.absolute-container { 
+    position: relative; 
+    width: 650px;
+    height: 220px;
+    border: 3px dashed #004d99; 
+    margin-top: 50px;
+    margin-left: 20px;
+    background-color: #f0f8ff; 
+}
+
+.relative-flow-parent { 
+    display: flex;
+    width: 650px;
+    height: 220px;
+    border: 3px solid #1a7e46; 
+    background-color: #f7fff7;
+}
+
+h1 {
+    color: #004d99;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+p {
+    margin-bottom: 25px;
+    font-style: italic;
+    color: #444;
+}
+</style>
+</head>
+<body>
+<h1>CSS RELATIVE POSITIONING</h1>
+<p>An element with <b>position: relative;</b> is offset from its original position. Critically, it does <b>not</b> affect the layout of other surrounding elements, preserving their space in the normal document flow.</p>
+<div class="relative-flow-parent">
+<div class="item" id="cyan-box"></div>
+<div class="item" id="magenta-box"></div>
+<div class="item" id="orange-box"></div>
+<div class="item" id="purple-box"></div>
+</div>
+
+<hr>
+
+<h1>CSS ABSOLUTE POSITIONING</h1>
+<p>An element with <b>position: absolute;</b> is removed from the normal document flow and positioned relative to the nearest ancestor that has a position property other than <b>static</b>. Here, the positioning ancestor is the div with class "absolute-container", which is set to relative.</p>
+<div class="absolute-container">
+<div class="item" id="box-one"></div>
+<div class="item" id="box-two"></div>
+<div class="item" id="box-three"></div>
+<div class="item" id="box-four"></div>
+</div>
+</body>
+</html>

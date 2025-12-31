@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>MCA Student Registration</title>
+</head>
+<body bgcolor="#E6E6FA">
+<h2 align="center" style="color: navy;"><u>MCA STUDENT REGISTRATION FORM</u></h2>
+<form>
+<fieldset style="width: 80%; margin: 0 auto; padding: 20px;">
+<legend style="font-weight: bold; color: navy;">Personal Details</legend>
+    <label for="fullName">Applicant Name:</label><br>
+    <input type="text" id="fullName" name="fullName" size="40"><br><br>
+
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob"><br><br>
+    
+    <label for="aadhaar">Aadhaar Number (Last 4 digits):</label><br>
+    <input type="text" id="aadhaar" name="aadhaar" maxlength="4" pattern="[0-9]{4}"><br><br> <label for="phone">Contact Number:</label><br>
+    <input type="tel" id="phone" name="phone"><br><br>
+
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" size="40"><br><br>
+
+    <label for="password">Set Password:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+
+    <label>Gender:</label>
+    <input type="radio" id="genderMale" name="gender" value="male"> <label for="genderMale">Male</label>
+    <input type="radio" id="genderFemale" name="gender" value="female"> <label for="genderFemale">Female</label>
+    <input type="radio" id="genderOther" name="gender" value="other"> <label for="genderOther">Prefer not to say</label> <br><br>
+    
+    <label for="address">Permanent Address:</label><br>
+    <textarea id="address" name="address" rows="4" cols="30"></textarea><br><br>
+    
+    <label for="course">UG Stream:</label>
+    <select id="course" name="course">
+    <option value="">-- Choose One --</option>
+    <option value="BCA">BCA</option>
+    <option value="Bsc_CS">B.Sc. Computer Science</option>
+    <option value="Bcom">B.Com</option>
+    <option value="Bsc_Chem">B.Sc. Chemistry</option>
+    <option value="Bsc_Phy">B.Sc. Physics</option>
+    <option value="Bsc_Math">B.Sc. Mathematics</option>
+    <option value="Other">Other</option>
+    </select><br><br>
+    
+    <label>Interests:</label><br>
+    <input type="checkbox" id="coding" name="interest1" value="coding"> <label for="coding">Programming/Coding</label><br>
+    <input type="checkbox" id="reading" name="interest2" value="reading"> <label for="reading">Literature/Reading</label><br>
+    <input type="checkbox" id="sports" name="interest3" value="sports"> <label for="sports">Team Sports</label><br>
+    <input type="checkbox" id="tech" name="interest4" value="tech"> <label for="tech">Gadgets/Technology</label><br><br> <input type="submit" value="Submit Application" style="background-color: navy; color: white; padding: 10px 20px;">
+    <input type="reset" value="Reset Form" style="background-color: navy; color: white; padding: 10px 20px;">
+</fieldset>
+</form>
+</body>
+</html>

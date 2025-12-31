@@ -1,0 +1,28 @@
+#box-one {
+    position: absolute;
+    left: 40px; 
+    top: 10px; 
+    background-color: #3f51b5; 
+}
+
+#box-two {
+    position: absolute;
+    right: 30px; 
+    bottom: 40px; 
+    background-color: #f44336; 
+}
+
+#box-three {
+    position: absolute;
+    left: 45%; 
+    top: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: #4caf50; 
+}
+
+#box-four {
+    position: absolute;
+    right: 10px; 
+    top: 10px; 
+    background-color: #ffc107; 
+}

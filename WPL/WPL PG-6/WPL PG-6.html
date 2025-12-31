@@ -1,0 +1,227 @@
+<html>
+<head>
+<title>WPL PROGRAM 6</title>
+<style>
+body{
+    margin: 0;
+    padding: 25px; 
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+}
+h1{
+    font-size: 38px;
+    font-style: italic; 
+    text-align: center;
+    color: #333;
+}
+h2{
+    font-size: 28px;
+    margin-left: 15px; 
+    color: #0056b3; 
+}
+h3{
+    margin-left: 35px; 
+}
+input{
+    margin-left: 40px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+p{
+    margin-left: 55px; 
+    color: #555;
+}
+button{
+    margin-left: 40px;
+    padding: 10px 18px; 
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #0056b3;
+}
+</style>
+</head>
+<body>
+<h1>JavaScript String and Math Functions Demonstration</h1><br>
+<ol>
+<li><h2>String Manipulation Methods</h2></li>
+<input type="text" id="inputString" placeholder="Enter sample text (e.g., Hello World)">
+<ul>
+    <li><h3>String Character at Index (charAt):</h3></li>
+    <button onclick="stringCharAt()">Get Char (Index 4)</button><br>
+    <p id="charat"></p>
+
+    <li><h3>String Length Property:</h3></li>
+    <button onclick="stringLength()">Get Length</button><br>
+    <p id="length"></p>
+    
+    <li><h3>String Slice:</h3></li>
+    <button onclick="stringSlice()">Slice (7, 13)</button><br>
+    <p id="sliced1"></p>
+    <p id="sliced2"></p>
+    
+    <li><h3>String Substring:</h3></li>
+    <button onclick="stringSubstring()">Substring (7, 13)</button><br>
+    <p id="substringed1"></p>
+
+    <li><h3>String Replace:</h3></li>
+    <button onclick="stringReplace()">Replace 'World' with 'Students'</button><br>
+    <p id="original"></p>
+    <p id="replace"></p>
+    
+    <li><h3>String to Uppercase:</h3></li>
+    <button onclick="stringUpperCase()">To Uppercase</button><br>
+    <p id="upper"></p>
+    
+    <li><h3>String Concatenation:</h3></li>
+    <button onclick="stringConcat()">Concat with " Everyone"</button><br>
+    <p id="concated1"></p>
+    <p id="concated3"></p>
+</ul>
+<br><br>
+<li> <h2>Mathematical Operations (Math Object)</h2></li>
+<ul>
+    <li><h3>Rounding and Integer Methods: </h3></li>
+    <button onclick="numberConvertion()">Convert Number</button><br>
+    <p id="num">Initial number used: 15.7</p>
+    <ul>
+        <li>Math.round() : </li>
+        <p id="round"></p>
+        <li>Math.ceil() : </li>
+        <p id="ceil"></p>
+        <li>Math.floor() : </li>
+        <p id="floor"></p>
+        <li>Math.trunc() : </li>
+        <p id="trunc"></p>
+    </ul>
+    
+    <li><h3>Math.sign(): </h3></li>
+    <p>Tests for positive, negative, or zero:</p>
+    <button onclick="numberSign()">Test Signs</button><br>
+    <p id="sign1"></p>
+    <p id="sign2"></p>
+    <p id="sign3"></p>
+    
+    <li><h3>Math.pow(x, y): </h3></li>
+    <p>Calculates the value of x raised to the power of y :</p>
+    <button onclick="numberPow()">Calculate Power</button><br>
+    <p id="power"></p>
+    
+    <li><h3>Math.sqrt(x): </h3></li>
+    <p>Returns the square root of x :</p>
+    <button onclick="numberSqrt()">Calculate Square Root</button><br>
+    <p id="sqrt"></p>
+    
+    <li><h3>Math.abs(x): </h3></li>
+    <p>Returns the absolute (positive) value of x:</p>
+    <button onclick="numberAbs()">Get Absolute Value</button><br>
+    <p id="absolute"></p>
+    
+    <li><h3>Math.min() and Math.max(): </h3></li>
+    <button onclick="numberMinMax()">Find Min and Max</button><br>
+    <p id="list">Using list: (10, 5, 50, -2, 100, 1)</p>
+    <p id="min"></p>
+    <p id="max"></p>
+
+    <li><h3>Math.sin(x): </h3></li>
+    <p>Returns the sine of a number:</p>
+    <button onclick="numberSin()">Calculate Sine</button><br>
+    <p id="sine"></p>
+</ul>
+</ol>
+
+<script>
+let inputElement = document.getElementById("inputString");
+
+function stringCharAt(){
+    let text = inputElement.value;
+    let char = text.charAt(4);
+    document.getElementById("charat").innerHTML = "Character at index 4 is: "+char+"";
+}
+
+function stringLength(){
+    let text = inputElement.value;
+    let len = text.length;
+    document.getElementById("length").innerHTML = "Total number of characters is: "+len+"";
+}
+
+function stringSlice(){
+    let text = inputElement.value;
+    let slice1 = text.slice(7,13);
+    document.getElementById("sliced1").innerHTML = "Slice (7, 13) result: "+slice1+"";
+    let slice2 = text.slice(-5); 
+    document.getElementById("sliced2").innerHTML = "Slice with negative parameter (-5) result: "+slice2+"";
+}
+
+function stringSubstring(){
+    let text = inputElement.value;
+    let substring1 = text.substring(7,13);
+    document.getElementById("substringed1").innerHTML = "Substring (7, 13) result: "+ substring1+"";
+}
+
+function stringReplace(){
+    let text = inputElement.value;
+    let newtext = text.replace("World","Students"); 
+    document.getElementById("original").innerHTML = "Original string: "+text;
+    document.getElementById("replace").innerHTML = "String after replacement: "+newtext+"";
+}
+
+function stringUpperCase(){
+    let text = inputElement.value;
+    let textUp = text.toUpperCase();
+    document.getElementById("upper").innerHTML = "Converted to UPPERCASE: "+ textUp+"";
+}
+
+function stringConcat(){
+    let text = inputElement.value;
+    let textToAdd = " Everyone"; 
+    let text3 = text.concat(textToAdd);
+    document.getElementById("concated1").innerHTML = "Original Text: "+ text;
+    document.getElementById("concated3").innerHTML = "Concatenated Result: "+ text3+"";
+}
+
+function numberConvertion(){
+    let x = 15.7; 
+    document.getElementById("num").innerHTML = "The Number used for rounding is: " + x+"";
+    document.getElementById("round").innerHTML = "Math.round(x) (Nearest Integer): " + Math.round(x)+"";
+    document.getElementById("ceil").innerHTML = "Math.ceil(x) (Rounds Up): " + Math.ceil(x)+"";
+    document.getElementById("floor").innerHTML = "Math.floor(x) (Rounds Down): " + Math.floor(x)+"";
+    document.getElementById("trunc").innerHTML = "Math.trunc(x) (Integer Part): " + Math.trunc(x)+"";
+}
+
+function numberSign(){
+    document.getElementById("sign1").innerHTML = "Math.sign(12) returns: " + Math.sign(12)+""; 
+    document.getElementById("sign2").innerHTML = "Math.sign(-8) returns: " + Math.sign(-8)+"";
+    document.getElementById("sign3").innerHTML = "Math.sign(0) returns: " + Math.sign(0)+"";
+}
+
+function numberPow(){
+    document.getElementById("power").innerHTML = "Math.pow(5, 3) (5 cubed) returns: " + Math.pow(5,3)+"";
+}
+
+function numberSqrt(){
+    document.getElementById("sqrt").innerHTML = "Math.sqrt(144) (Square Root) returns: " + Math.sqrt(144)+"";
+}
+
+function numberAbs(){
+    document.getElementById("absolute").innerHTML = "Math.abs(-99.3) (Absolute Value) returns: " + Math.abs(-99.3)+"";
+}
+
+function numberMinMax(){
+    let list = [10, 5, 50, -2, 100, 1];
+    document.getElementById("list").innerHTML ="The List is : (10, 5, 50, -2, 100, 1)";
+    document.getElementById("min").innerHTML ="Minimum in the list is: " + Math.min(...list)+"";
+    document.getElementById("max").innerHTML ="Maximum in the list is: " + Math.max(...list)+"";
+}
+
+function numberSin(){
+    let angle = Math.PI / 2;
+    document.getElementById("sine").innerHTML = "Math.sin(Pi/2) returns: " + Math.sin(angle);}
+</script>
+</body>
+</html>
